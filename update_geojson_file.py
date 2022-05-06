@@ -5,7 +5,7 @@ import json
 def main():
     print("Making request to ibge to get GeoJson..")
     ibge_request = requests.get(
-        "https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?intrarregiao=UF&formato=application/vnd.geo+json"
+        "https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?intrarregiao=UF&qualidade=minima&formato=application/vnd.geo+json"
     )
 
     if ibge_request.status_code != 200:
